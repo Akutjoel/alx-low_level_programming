@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 /**
- * main - Determines either greater than five, less than six or is zero
+ * main - Determine either greater than five, less than six or is zero
  * Return: 0 if successful.
  */
 int main(void)
@@ -16,11 +16,11 @@ int main(void)
 	{
 		printf("Last digit of %d is %d and is greater than 5\n", n, n % 10)
 	}
-	else if (n % 10 == 0)
+	if (n % 10 == 0)
 	{
 		printf("Last digit of %d is %d and is 0\n", n, n % 10);
 	}
-	else if (n % 10 < 6  && n % 10 != 0)
+	if (n % 10 < 6  && n % 10 != 0)
 	{
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
 	}
