@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 
 	for (tens = 1; tens <= 10; tens++)
 	{
-		for (alpha = 'a' alpha <= 'z' alpha++)
+		for (alpha = 'a'; alpha <= 'z'; alpha++)
 		{
 			_putchar(alpha);
 		}
