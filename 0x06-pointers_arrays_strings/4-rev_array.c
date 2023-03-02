@@ -1,30 +1,21 @@
 #include "main.h"
-#define NULL 0
 
 /**
- * _strpbrk - return pointer to byte in s that matches a byte in accept
- * @s: string to search
- * @accept: target matches
- * Return: pointer to index of string at first occurence
+ *  reverse_array - Reverses the content of an array of integers.
+ *  @a: The array of integers to be reversed.
+ *  @n: The number of elements in the array.
  */
 
-char *_strpbrk(char *s, char *accept)
-{
-	int i = 0, j;
+void reverse_array(int *a, int n)
 
-	while (s[i] != '\0') /*iterate through string*/
+{
+	int tmp, index;
+
+	for (index = n - 1; index >= n / 2; index--)
 	{
-		for (j = 0; accept[j] != '\0'; j++) /* iterate through target */
-		{
-			if (s[i] == accept[j]) /* stop at first match */
-			{
-				s = &s[i]; /* set pointer to first occurence */
-				return (s);
-			}
-		}
-		i++;
+		tmp = a[n - 1 - index];
+		a[n - 1 - index] = a[index];
+		a[index] = tmp;
 	}
-	return (NULL); /* return NULL if no matches */
 
 }
-
